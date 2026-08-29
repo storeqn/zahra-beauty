@@ -1,6 +1,6 @@
 (() => {
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwxFs75do4gJ941Agg0x6432z18qPjqkZ0ucutOCkaH-keZfDGP_xCPRhawbVXLIw8Y/exec';
-  const CACHE_KEY = 'alameer_coupons_cache_v2';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzAnGmxXNDdEmh2OeYIF5qX73rRxXFNE3_75WG9IEYD8hlj4cWdbkVla-uTuIUqcYS1/exec';
+  const CACHE_KEY = 'zahra_coupons_cache_v2';
   const CACHE_MAX_AGE = 5 * 60 * 1000;
   const CART_REFRESH_AGE = 60 * 1000;
 
