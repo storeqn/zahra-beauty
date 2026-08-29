@@ -1,0 +1,14 @@
+{
+  "name": "كوزمتك زهرة بيوتي",
+  "short_name": "زهرة بيوتي",
+  "description": "متجر زهرة بيوتي للعطور والمكياج والعناية",
+  "start_url": "/zahra-beauty/",
+  "scope": "/zahra-beauty/",
+  "display": "standalone",
+  "background_color": "#f8f4ec",
+  "theme_color": "#f8f4ec",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": []
+}

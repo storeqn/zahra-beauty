@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <meta
+    name="theme-color"
+    content="#f8f4ec"
+  >
+
+  <meta
+    name="description"
+    content="كوزمتك زهرة بيوتي - عناية بالبشرة، مكياج، عطور ومنتجات أصلية"
+  >
+
+  <title>
+    كوزمتك زهرة بيوتي
+  </title>
+
+  <!-- PWA -->
+<link rel="manifest" href="manifest.webmanifest">
+
+<!-- iPhone / iPad -->
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="logo.svg"
+>
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="logo.svg"
+>
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="512x512"
+  href="logo.svg"
+>
+
+<meta
+  name="apple-mobile-web-app-capable"
+  content="yes"
+>
+
+<meta
+  name="apple-mobile-web-app-status-bar-style"
+  content="default"
+>
+
+<meta
+  name="apple-mobile-web-app-title"
+  content="زهرة بيوتي"
+>
+  
+  <link
+    rel="stylesheet"
+    href="styles.css"
+  >
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       OFFLINE
+  ========================== -->
+
+  <div
+    id="offlineBar"
+    class="offline-bar"
+    hidden
+  >
+    أنت غير متصل بالإنترنت — ستظهر البيانات المحفوظة إن وجدت
+  </div>
+
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="topbar">
+
+    <div class="topbar-inner container">
+
+
+      <button
+        class="icon-button"
+        id="menuBtn"
+        aria-label="فتح القائمة"
+        type="button"
+      >
+        ☰
+      </button>
+
+
+      <a
+        class="brand"
+        href="#home"
+        aria-label="زهرة بيوتي"
+      >
+
+        <img
+          src="logo.svg"
+          alt="شعار زهرة بيوتي"
+          class="brand-logo"
+        >
+
+        <span class="brand-text">
+          زهرة بيوتي
+        </span>
+
+      </a>
+
+
+      <button
+        class="cart-button"
+        id="cartBtn"
+        aria-label="السلة"
+        type="button"
+      >
+
+        <span class="cart-icon">
+          🛒
+        </span>
+
+        <span
+          class="cart-badge"
+          id="cartCount"
+        >
+          0
+        </span>
+
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       DRAWER
+  ========================== -->
+
+  <aside
+    class="drawer"
+    id="drawer"
+    aria-hidden="true"
+  >
+
+    <div class="drawer-panel">
+
+      <div class="drawer-head">
+
+        <strong>
+          زهرة بيوتي
+        </strong>
+
+        <button
+          class="icon-button"
+          id="closeMenuBtn"
+          aria-label="إغلاق"
+          type="button"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <nav class="drawer-nav">
+
+        <a href="#home">
+          الرئيسية
+        </a>
+
+        <a href="#offers">
+          العروض
+        </a>
+
+        <a href="#categories">
+          الأقسام
+        </a>
+
+        <a href="#products">
+          المنتجات
+        </a>
+
+        <a href="#footer">
+          تواصل معنا
+        </a>
+
+      </nav>
+
+    </div>
+
+
+    <button
+      class="drawer-backdrop"
+      id="drawerBackdrop"
+      aria-label="إغلاق القائمة"
+      type="button"
+    >
+    </button>
+
+  </aside>
+
+
+
+  <!-- =========================
+       MAIN
+  ========================== -->
+
+  <main id="home">
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero container">
+
+      <div class="hero-card">
+
+
+        <div class="hero-copy">
+
+          <span class="eyebrow">
+            COSMETICS • PERFUMES • SKIN CARE
+          </span>
+
+          <h1>
+            زهرة بيوتي
+          </h1>
+
+          <p>
+            اختيارات مميزة من العطور والمكياج والعناية، تصفح المنتجات بسهولة وأرسل طلبك مباشرة عبر واتساب.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              class="btn btn-primary"
+              href="#products"
+            >
+              تسوق الآن
+            </a>
+
+            <a
+              class="btn btn-ghost"
+              href="#offers"
+            >
+              شاهد العروض
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="hero-mark"
+          aria-hidden="true"
+        >
+          ZB
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         BRANDS STRIP
+    ========================== -->
+
+    <section
+      class="brand-showcase container"
+      id="brandShowcase"
+      hidden
+      aria-label="البراندات"
+    >
+      <div
+        class="brand-showcase-track"
+        id="brandShowcaseTrack"
+      ></div>
+    </section>
+
+
+
+    <!-- =========================
+         SEARCH
+    ========================== -->
+
+    <section
+      class="toolbar container"
+      aria-label="البحث والتصفية"
+    >
+
+      <label class="searchbox">
+
+        <span>
+          ⌕
+        </span>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="إبحث عن منتج، ماركة أو قسم..."
+          autocomplete="off"
+        >
+
+      </label>
+
+
+      <button
+        class="filter-button"
+        id="showAllBtn"
+        type="button"
+      >
+        كل المنتجات
+      </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         OFFERS
+    ========================== -->
+
+    <section
+      class="section container"
+      id="offers"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="section-kicker">
+            SPECIAL OFFERS
+          </span>
+
+          <h2>
+            العروض
+          </h2>
+
+        </div>
+
+
+        <button
+          class="text-button"
+          data-filter-offers="true"
+          type="button"
+        >
+          عرض الكل
+        </button>
+
+      </div>
+
+
+      <div
+        class="product-grid"
+        id="offersGrid"
+      >
+      </div>
+
+
+      <div
+        class="empty-card"
+        id="offersEmpty"
+        hidden
+      >
+        لا توجد عروض حالياً
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FEATURED
+    ========================== -->
+
+    <section
+      id="featured"
+      class="section container"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="section-kicker">
+            الأكثر طلباً
+          </span>
+
+          <h2>
+            منتجات مختارة لك
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div
+        id="featuredGrid"
+        class="product-grid"
+      >
+      </div>
+
+
+      <div
+        id="featuredEmpty"
+        class="empty-card"
+        hidden
+      >
+        لا توجد منتجات مميزة حالياً.
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CATEGORIES
+         مخفي في الرئيسية
+    ========================== -->
+
+    <section
+      class="section container"
+      id="categories"
+      hidden
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="section-kicker">
+            CATEGORIES
+          </span>
+
+          <h2>
+            الأقسام
+          </h2>
+
+        </div>
+
+      </div>
+
+
+      <div
+        class="category-grid"
+        id="categoryGrid"
+      >
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================== -->
+
+    <section
+      class="section container"
+      id="products"
+    >
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="section-kicker">
+            OUR PRODUCTS
+          </span>
+
+          <h2 id="productsTitle">
+            كل المنتجات
+          </h2>
+
+        </div>
+
+
+        <span
+          class="count-label"
+          id="productsCount"
+        >
+        </span>
+
+      </div>
+
+
+      <div
+        class="subfilters"
+        id="subfilters"
+        hidden
+      >
+      </div>
+
+
+      <div
+        class="product-grid"
+        id="productsGrid"
+      >
+      </div>
+
+
+      <div
+        class="empty-card"
+        id="productsEmpty"
+        hidden
+      >
+        لا توجد منتجات مطابقة.
+      </div>
+
+
+      <div
+        class="loading-card"
+        id="loadingCard"
+      >
+        جاري تحميل المنتجات...
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer
+    class="footer"
+    id="footer"
+  >
+
+    <div class="container footer-grid">
+
+
+      <div>
+
+        <img
+          src="logo.svg"
+          alt="زهرة بيوتي"
+          class="footer-logo"
+        >
+
+        <p>
+          الطلب والتأكيد مباشرة عبر واتساب
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          رقم الطلب
+        </strong>
+
+        <a
+          href="https://wa.me/9647733949777"
+          target="_blank"
+          rel="noopener"
+        >
+          0773 394 9777
+        </a>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          التصفح
+        </strong>
+
+        <a href="#offers">
+          العروض
+        </a>
+
+        <a href="#categories">
+          الأقسام
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      ©
+      <span id="year"></span>
+      زهرة بيوتي
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =========================
+       PRODUCT MODAL
+  ========================== -->
+
+  <dialog
+    class="modal"
+    id="productModal"
+  >
+
+    <button
+      class="modal-close"
+      type="button"
+      data-close-modal="productModal"
+      aria-label="إغلاق"
+    >
+      ×
+    </button>
+
+
+    <div
+      id="productModalContent"
+    >
+    </div>
+
+  </dialog>
+
+
+
+  <!-- =========================
+       CART MODAL
+  ========================== -->
+
+  <dialog
+    class="modal cart-modal"
+    id="cartModal"
+  >
+
+    <div class="modal-header">
+
+      <h2>
+        السلة
+      </h2>
+
+      <button
+        class="modal-close static"
+        type="button"
+        data-close-modal="cartModal"
+        aria-label="إغلاق"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div
+      class="cart-items"
+      id="cartItems"
+    >
+    </div>
+
+
+    <div class="cart-summary">
+
+      <div>
+        <span>
+          عدد القطع
+        </span>
+
+        <strong id="cartPieces">
+          0
+        </strong>
+      </div>
+
+
+      <div>
+        <span>
+          الإجمالي
+        </span>
+
+        <strong id="cartTotal">
+          0
+        </strong>
+      </div>
+
+    </div>
+
+
+    <form
+      id="checkoutForm"
+      class="checkout-form"
+    >
+
+      <input
+        name="name"
+        type="text"
+        placeholder="الاسم"
+        required
+      >
+
+      <input
+        name="phone"
+        type="tel"
+        placeholder="رقم الهاتف"
+        required
+      >
+
+      <textarea
+        name="address"
+        placeholder="العنوان"
+        required
+      ></textarea>
+
+      <input
+        name="landmark"
+        type="text"
+        placeholder="أقرب نقطة دالة"
+      >
+
+      <textarea
+        name="notes"
+        placeholder="ملاحظات الطلب"
+      ></textarea>
+
+
+      <button
+        type="submit"
+        class="checkout-button"
+      >
+        إرسال الطلب عبر واتساب
+      </button>
+
+    </form>
+
+  </dialog>
+
+
+
+  <!-- =========================
+       TOAST
+  ========================== -->
+
+  <div
+    id="toast"
+    class="toast"
+  >
+  </div>
+
+
+
+  <!-- =========================
+       BOTTOM NAV
+  ========================== -->
+
+  <nav class="bottom-nav">
+
+
+    <a
+      href="#home"
+      data-go-home
+    >
+      <span>
+        ⌂
+      </span>
+
+      <small>
+        الرئيسية
+      </small>
+    </a>
+
+
+    <a
+      href="#categories"
+      data-go-categories
+    >
+      <span>
+        ▦
+      </span>
+
+      <small>
+        الأقسام
+      </small>
+    </a>
+
+
+    <a
+      href="#offers"
+      data-filter-offers="true"
+    >
+      <span>
+        ★
+      </span>
+
+      <small>
+        العروض
+      </small>
+    </a>
+
+
+    <button
+      type="button"
+      id="bottomCartBtn"
+    >
+
+      <span>
+        🛒
+      </span>
+
+      <small>
+        السلة
+      </small>
+
+      <b
+        id="bottomCartCount"
+      >
+        0
+      </b>
+
+    </button>
+
+  </nav>
+
+
+
+  <!-- =========================
+       SCRIPTS
+  ========================== -->
+
+
+<!-- =========================
+     INSTALL GUIDE
+========================= -->
+
+<div
+  id="installGuide"
+  class="install-guide"
+  hidden
+>
+
+  <div
+    class="install-guide-backdrop"
+    data-install-close
+  ></div>
+
+
+  <div class="install-guide-card">
+
+    <button
+      type="button"
+      class="install-guide-close"
+      data-install-close
+      aria-label="إغلاق"
+    >
+      ×
+    </button>
+
+
+    <div class="install-guide-top">
+
+      <img
+        src="logo.svg"
+        alt="زهرة بيوتي"
+        class="install-guide-logo"
+      >
+
+
+      <div>
+
+        <h3>
+          ثبّت متجر زهرة بيوتي
+        </h3>
+
+        <p>
+          أضف المتجر إلى الشاشة الرئيسية للوصول السريع وتجربة أفضل.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="install-guide-title">
+      طريقة التثبيت:
+    </div>
+
+
+    <div class="install-guide-steps">
+
+      <div class="install-step">
+
+        <span class="install-step-number">
+          1
+        </span>
+
+        <div>
+          اضغط على زر المشاركة
+        </div>
+
+        <span class="install-step-icon">
+          ⇧
+        </span>
+
+      </div>
+
+
+      <div class="install-step">
+
+        <span class="install-step-number">
+          2
+        </span>
+
+        <div>
+          اختر
+          <strong>
+            إضافة إلى الشاشة الرئيسية
+          </strong>
+        </div>
+
+        <span class="install-step-icon">
+          ＋
+        </span>
+
+      </div>
+
+
+      <div class="install-step">
+
+        <span class="install-step-number">
+          3
+        </span>
+
+        <div>
+          اضغط على
+          <strong>
+            إضافة
+          </strong>
+        </div>
+
+        <span class="install-step-icon">
+          ✓
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="install-guide-actions">
+
+      <button
+        type="button"
+        class="install-later-btn"
+        data-install-later
+      >
+        لاحقًا
+      </button>
+
+
+      <button
+        type="button"
+        class="install-ok-btn"
+        data-install-ok
+      >
+        حسنًا، فهمت
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <script src="config.js"></script>
+  <script src="coupons-sync.js"></script>
+  <script src="app.js"></script>
+  <script src="progressive-products.js"></script>
+  
+</body>
+
+</html>

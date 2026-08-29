@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="إدارة المتجر">
+<meta name="theme-color" content="#f7f4ed">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180x180.png?v=10">
+<title>إدارة المتجر | زهرة بيوتي</title>
+<style>
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom);background:#f7f4ed;color:#171512;font-family:Tahoma,Arial,sans-serif}.container{width:min(920px,calc(100% - 24px));margin:22px auto 55px}.header{text-align:center;margin-bottom:18px}.header h1{margin:0 0 7px;font-size:27px}.header p{margin:0;color:#777;font-size:14px}.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px}.tab{border:1px solid #e3ddd2;background:#fff;color:#171512;border-radius:14px;padding:13px 8px;font-weight:700;cursor:pointer}.tab.active{background:#11100e;color:#fff;border-color:#11100e}.card{background:#fff;border-radius:22px;padding:22px;box-shadow:0 12px 35px rgba(0,0,0,.07)}.hidden{display:none!important}.field{margin-bottom:17px}label{display:block;margin-bottom:7px;font-weight:bold;font-size:14px}input,textarea{width:100%;border:1px solid #e1ddd5;background:#fff;border-radius:13px;padding:13px 14px;font-size:16px;font-family:inherit;outline:none}input:focus,textarea:focus{border-color:#b68b3d}.combo{position:relative}.combo input{padding-left:50px}.comboBtn{position:absolute;left:3px;top:3px;bottom:3px;width:44px;border:0;border-radius:10px;background:transparent;color:#171512;font-size:20px;cursor:pointer}.comboBtn.open{transform:rotate(180deg)}.comboMenu{position:absolute;z-index:100;top:calc(100% + 5px);right:0;left:0;max-height:240px;overflow:auto;background:#fff;border:1px solid #e1ddd5;border-radius:13px;box-shadow:0 12px 30px rgba(0,0,0,.14);padding:5px}.comboOption{width:100%;border:0;background:#fff;text-align:right;padding:12px;border-radius:9px;font-family:inherit;font-size:15px;cursor:pointer}.comboOption:hover{background:#f4efe7}.comboEmpty{padding:12px;color:#888;text-align:center;font-size:13px}textarea{min-height:110px;resize:vertical}.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}.checkBox{display:flex;align-items:center;gap:9px;padding:13px;border:1px solid #eee6d8;background:#faf8f4;border-radius:13px;cursor:pointer}.checkBox input{width:20px;height:20px}.preview{display:none;width:130px;height:130px;object-fit:contain;margin-top:10px;background:#f7f7f7;border-radius:14px;border:1px solid #eee}small{display:block;margin-top:6px;color:#888;line-height:1.6}.primary,.secondary,.editBtn{width:100%;border:0;border-radius:14px;padding:15px;background:#11100e;color:#fff;font-size:17px;font-weight:bold;font-family:inherit;cursor:pointer}.secondary{background:#eee9df;color:#171512;margin-top:9px}.primary:disabled{opacity:.55}.status{display:none;margin-top:16px;padding:13px;border-radius:13px;text-align:center;font-weight:bold}.status.success{display:block;background:#e7f8ed;color:#16743a}.status.error{display:block;background:#ffebeb;color:#b42318}.status.info{display:block;background:#fff4d8;color:#765500}.editTitle{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.editTitle h2{font-size:19px;margin:0}.editBadge{background:#fff1c9;color:#765500;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:bold}.toolbar{display:flex;gap:9px;margin-bottom:14px}.toolbar input{flex:1}.refresh{width:auto;min-width:52px;border:0;border-radius:13px;background:#11100e;color:#fff;font-size:18px;cursor:pointer}.products{display:grid;gap:10px}.productItem{display:grid;grid-template-columns:72px minmax(0,1fr) auto;gap:12px;align-items:center;border:1px solid #eee7dc;border-radius:16px;padding:10px;background:#fff}.productItem img{width:72px;height:72px;object-fit:contain;border-radius:12px;background:#f7f7f7}.productInfo{min-width:0}.productInfo h3{margin:0 0 5px;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.productMeta{font-size:12px;color:#777;line-height:1.7}.editBtn{width:auto;padding:10px 14px;font-size:14px}.empty,.loader{text-align:center;color:#777;padding:26px 10px}.count{color:#777;font-size:13px;margin:4px 2px 12px}.couponFrame,.brandFrame{width:100%;height:1050px;border:0;border-radius:22px;background:#f7f4ed;display:block}.hint{padding:10px 12px;border-radius:12px;background:#fff8e8;color:#6b521f;font-size:13px;margin:-5px 0 16px}
+@media(max-width:600px){.container{margin-top:14px}.card{padding:16px}.row{grid-template-columns:1fr}.header h1{font-size:22px}.productItem{grid-template-columns:62px minmax(0,1fr)}.productItem img{width:62px;height:62px}.editBtn{grid-column:1/-1;width:100%}.tabs{position:sticky;top:env(safe-area-inset-top);z-index:20;background:#f7f4ed;padding:4px 0;grid-template-columns:repeat(2,1fr)}.tab{font-size:12px;padding:11px 5px}.couponFrame,.brandFrame{height:1150px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header"><h1>إدارة متجر زهرة بيوتي</h1><p>إدارة المنتجات والبراندات والكوبونات من الهاتف مباشرة</p></div>
+  <div class="tabs">
+    <button id="tabProducts" class="tab active" type="button">المنتجات الحالية</button>
+    <button id="tabForm" class="tab" type="button">+ إضافة منتج</button>
+    <button id="tabBrands" class="tab" type="button">🏷️ البراندات</button>
+    <button id="tabCoupons" class="tab" type="button">🎟️ الكوبونات</button>
+  </div>
+
+  <section id="productsView" class="card">
+    <div class="toolbar"><input id="searchInput" type="search" placeholder="ابحث باسم المنتج أو القسم أو القسم الفرعي أو البراند..."><button id="refreshBtn" class="refresh" type="button">↻</button></div>
+    <div id="productCount" class="count"></div>
+    <div id="productsList" class="products"><div class="loader">جاري تحميل المنتجات...</div></div>
+  </section>
+
+  <section id="formView" class="card hidden">
+    <div class="editTitle"><h2 id="formTitle">إضافة منتج جديد</h2><span id="editBadge" class="editBadge hidden">وضع التعديل</span></div>
+    <form id="productForm">
+      <input id="productId" type="hidden">
+      <div class="field"><label>اسم المنتج *</label><input id="name" type="text" required placeholder="مثال: كريم العناية بالقدمين"></div>
+      <div class="row"><div class="field"><label>السعر *</label><input id="price" type="number" min="0" required></div><div class="field"><label>السعر القديم</label><input id="old_price" type="number" min="0"></div></div>
+      <div class="field"><label>الكمية المتوفرة *</label><input id="stock" type="number" min="0" required value="0"><small>اكتب 0 إذا نفذت الكمية.</small></div>
+
+      <div class="row">
+        <div class="field"><label>القسم الرئيسي *</label><div class="combo"><input id="category" type="text" required autocomplete="off" placeholder="مثال: العناية بالجسم"><button id="categoryBtn" class="comboBtn" type="button">⌄</button><div id="categoryMenu" class="comboMenu hidden"></div></div></div>
+        <div class="field"><label>القسم الفرعي</label><div class="combo"><input id="sub_category" type="text" autocomplete="off" placeholder="مثال: العناية بالقدمين"><button id="sub_categoryBtn" class="comboBtn" type="button">⌄</button><div id="sub_categoryMenu" class="comboMenu hidden"></div></div></div>
+      </div>
+      <div class="hint">اختر القسم الرئيسي أولاً، ثم اضغط سهم القسم الفرعي لعرض الخيارات السابقة والمقترحة. ويمكنك أيضاً كتابة قسم فرعي جديد.</div>
+      <div class="field"><label>البراند</label><div class="combo"><input id="brand" type="text" autocomplete="off" placeholder="ابحث في البراندات السابقة أو اكتب براند جديد"><button id="brandBtn" class="comboBtn" type="button">⌄</button><div id="brandMenu" class="comboMenu hidden"></div></div><small>اضغط السهم لعرض البراندات السابقة، أو ابدأ بالكتابة للبحث، ويمكنك كتابة اسم براند جديد مباشرة.</small></div>
+
+      <div class="checks"><label class="checkBox"><input id="offer" type="checkbox"><span>عرض خاص</span></label><label class="checkBox"><input id="featured" type="checkbox"><span>منتج مميز</span></label></div>
+      <div class="field"><label>ملاحظة الخصم</label><input id="discount_note" type="text"></div>
+      <div class="field"><label>رابط الصورة الرئيسية *</label><input id="image" type="url" required placeholder="https://..."><img id="preview" class="preview" alt="معاينة الصورة"></div>
+      <div class="field"><label>صور إضافية</label><textarea id="images" placeholder="ضع رابط كل صورة في سطر مستقل"></textarea></div>
+      <div class="field"><label>وصف المنتج</label><textarea id="desc"></textarea></div>
+      <button id="saveBtn" class="primary" type="submit">+ إضافة المنتج</button>
+      <button id="cancelEditBtn" class="secondary hidden" type="button">إلغاء التعديل</button>
+      <div id="status" class="status"></div>
+    </form>
+  </section>
+
+  <section id="brandsView" class="hidden"><iframe id="brandFrame" class="brandFrame" title="إدارة البراندات" loading="lazy"></iframe></section>
+  <section id="couponsView" class="hidden"><iframe id="couponFrame" class="couponFrame" title="إدارة الكوبونات" loading="lazy"></iframe></section>
+</div>
+<script src="config.js"></script>
+<script>
+const SCRIPT_URL="https://script.google.com/macros/s/ZAHRA_API_NOT_CONFIGURED/exec";
+const CSV_URL=(window.STORE_CONFIG&&window.STORE_CONFIG.sheetCsvUrl)||"";
+const $=id=>document.getElementById(id);
+const form=$("productForm"),saveBtn=$("saveBtn"),statusBox=$("status"),imageInput=$("image"),preview=$("preview"),productsList=$("productsList"),searchInput=$("searchInput"),productCount=$("productCount");
+let products=[],editingId="",categoryOptions=[],subCategoryOptions=[],brandOptions=[],savedBrandNames=[];
+const DEFAULT_CATEGORIES=["العناية بالبشرة","العناية بالجسم","غسولات","فرش مكياج","مكياج","عطور","لوشن جسم","العناية بالشعر"];
+const DEFAULT_BRANDS=["SKIN1004","Bioderma","Eucerin","CeraVe","The Ordinary"];
+const DEFAULT_SUBCATEGORIES={
+  "العناية بالبشرة":["غسول الوجه","مرطب","سيروم","واقي شمس","تونر","مقشر","العناية بالشفاه","العناية بمنطقة العين"],
+  "العناية بالجسم":["العناية بالقدمين","العناية باليدين","ترطيب الجسم","مقشرات الجسم","مزيلات العرق"],
+  "العناية بالشعر":["شامبو","بلسم","ماسكات الشعر","زيوت وسيرومات الشعر"],
+  "مكياج":["مكياج الوجه","مكياج العيون","مكياج الشفاه","الحواجب"],
+  "عطور":["عطور نسائية","عطور رجالية","عطور للجنسين"],
+  "غسولات":["غسول الوجه","غسول الجسم"],
+  "لوشن جسم":["لوشن الجسم"],
+  "فرش مكياج":["فرش الوجه","فرش العيون","أطقم فرش"]
+};
+const SUBCATEGORY_CACHE_KEY="alameer_admin_subcategories_v1";
+let savedSubcategories={};
+try{savedSubcategories=JSON.parse(localStorage.getItem(SUBCATEGORY_CACHE_KEY)||"{}")||{}}catch(_){savedSubcategories={}}
+
+function parseCSV(text){const rows=[];let row=[],cell="",quoted=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(c==='"'&&quoted&&n==='"'){cell+='"';i++;continue}if(c==='"'){quoted=!quoted;continue}if(c===','&&!quoted){row.push(cell);cell="";continue}if((c==='\n'||c==='\r')&&!quoted){if(c==='\r'&&n==='\n')i++;row.push(cell);cell="";if(row.some(v=>v!==""))rows.push(row);row=[];continue}cell+=c}row.push(cell);if(row.some(v=>v!==""))rows.push(row);if(!rows.length)return[];const headers=rows.shift().map(h=>h.trim().toLowerCase());return rows.map(r=>Object.fromEntries(headers.map((h,i)=>[h,(r[i]??"").trim()]))) }
+function truthy(v){return /^(1|true|yes|نعم|عرض خاص|active)$/i.test(String(v||"").trim())}
+function esc(v){return String(v??"").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[m]))}
+function normalizeImages(v){return String(v||"").split(/\s*[|;,\n]\s*/).map(x=>x.trim()).filter(Boolean)}
+function uniqueSorted(values){return [...new Set(values.map(v=>String(v||"").trim()).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"ar"))}
+function money(v){const n=Number(String(v||"").replace(/,/g,""));return Number.isFinite(n)?new Intl.NumberFormat("ar-IQ").format(n)+" د.ع":String(v||"")}
+function sleep(ms){return new Promise(resolve=>setTimeout(resolve,ms))}
+
+function allDefaultSubcategories(){return Object.values(DEFAULT_SUBCATEGORIES).flat()}
+function rememberSubcategory(category,sub){category=String(category||"").trim();sub=String(sub||"").trim();if(!category||!sub)return;const list=uniqueSorted([...(savedSubcategories[category]||[]),sub]);savedSubcategories[category]=list;try{localStorage.setItem(SUBCATEGORY_CACHE_KEY,JSON.stringify(savedSubcategories))}catch(_){}}
+function getSubOptions(){const cat=$("category").value.trim();const fromProducts=products.filter(p=>!cat||p.category===cat).map(p=>p.sub_category);const fromDefaults=cat?(DEFAULT_SUBCATEGORIES[cat]||[]):allDefaultSubcategories();const fromSaved=cat?(savedSubcategories[cat]||[]):Object.values(savedSubcategories).flat();return uniqueSorted([...fromDefaults,...fromSaved,...fromProducts])}
+function updateSuggestions(){categoryOptions=uniqueSorted([...DEFAULT_CATEGORIES,...Object.keys(savedSubcategories),...products.map(p=>p.category)]);brandOptions=uniqueSorted([...DEFAULT_BRANDS,...savedBrandNames,...products.map(p=>p.brand)]);subCategoryOptions=getSubOptions();renderCombo("category",categoryOptions);renderCombo("sub_category",subCategoryOptions);renderCombo("brand",brandOptions)}
+function optionsFor(id){return id==="category"?categoryOptions:id==="sub_category"?getSubOptions():brandOptions}
+function renderCombo(id,options,filter=""){const menu=$(id+"Menu"),q=filter.trim().toLowerCase(),list=options.filter(v=>!q||v.toLowerCase().includes(q));menu.innerHTML=list.length?list.map(v=>`<button type="button" class="comboOption" data-value="${esc(v)}">${esc(v)}</button>`).join(""):'<div class="comboEmpty">لا توجد نتائج — يمكنك كتابة اسم جديد</div>'}
+function toggleCombo(id,force){const menu=$(id+"Menu"),btn=$(id+"Btn"),willOpen=force===undefined?menu.classList.contains("hidden"):force;["category","sub_category","brand"].forEach(x=>{if(x!==id){$(x+"Menu").classList.add("hidden");$(x+"Btn").classList.remove("open")}});menu.classList.toggle("hidden",!willOpen);btn.classList.toggle("open",willOpen);if(willOpen)renderCombo(id,optionsFor(id),$(id).value)}
+["category","sub_category","brand"].forEach(id=>{$(id+"Btn").addEventListener("click",()=>toggleCombo(id));$(id).addEventListener("input",()=>{if(id==="category"){subCategoryOptions=getSubOptions();renderCombo("sub_category",subCategoryOptions)}renderCombo(id,optionsFor(id),$(id).value);toggleCombo(id,true)});$(id+"Menu").addEventListener("click",e=>{const o=e.target.closest("[data-value]");if(o){$(id).value=o.dataset.value;toggleCombo(id,false);if(id==="category"){subCategoryOptions=getSubOptions();renderCombo("sub_category",subCategoryOptions)}}})});
+document.addEventListener("click",e=>{if(!e.target.closest(".combo")){["category","sub_category","brand"].forEach(id=>toggleCombo(id,false))}});
+
+function showView(which){const views={products:$("productsView"),form:$("formView"),brands:$("brandsView"),coupons:$("couponsView")};Object.entries(views).forEach(([k,v])=>v.classList.toggle("hidden",k!==which));$("tabProducts").classList.toggle("active",which==="products");$("tabForm").classList.toggle("active",which==="form");$("tabBrands").classList.toggle("active",which==="brands");$("tabCoupons").classList.toggle("active",which==="coupons");if(which==="brands"&&!$("brandFrame").src)$("brandFrame").src="brands-admin.html?embedded=1";if(which==="coupons"&&!$("couponFrame").src)$("couponFrame").src="coupons-admin.html?embedded=1"}
+function setStatus(msg,type="info"){statusBox.textContent=msg;statusBox.className="status "+type}
+function clearStatus(){statusBox.className="status";statusBox.style.display="none"}
+async function fetchProductsData(){const res=await fetch(CSV_URL+(CSV_URL.includes("?")?"&":"?")+"t="+Date.now(),{cache:"no-store"});if(!res.ok)throw new Error("HTTP "+res.status);return parseCSV(await res.text()).filter(p=>p.id||p.name)}
+async function loadSavedBrands(){try{const res=await fetch(SCRIPT_URL+"?action=brands&t="+Date.now(),{cache:"no-store"});if(!res.ok)return;const data=await res.json();savedBrandNames=Array.isArray(data.brands)?data.brands.map(b=>String(b.name||"").trim()).filter(Boolean):[];updateSuggestions()}catch(e){console.warn("Brands list unavailable",e)}}
+async function loadProducts(){productsList.innerHTML='<div class="loader">جاري تحميل المنتجات...</div>';productCount.textContent="";try{products=await fetchProductsData();products.forEach(p=>rememberSubcategory(p.category,p.sub_category));updateSuggestions();renderProducts()}catch(e){console.error(e);updateSuggestions();productsList.innerHTML='<div class="empty">تعذر تحميل المنتجات. تحقق من الإنترنت ثم اضغط تحديث.</div>'}}
+async function refreshProductsSilently(){try{products=await fetchProductsData();products.forEach(p=>rememberSubcategory(p.category,p.sub_category));updateSuggestions();renderProducts();return true}catch(e){console.error(e);return false}}
+function renderProducts(){const q=searchInput.value.trim().toLowerCase(),list=products.filter(p=>!q||[p.name,p.category,p.sub_category,p.brand,p.id].some(v=>String(v||"").toLowerCase().includes(q)));productCount.textContent=`${list.length} منتج${q?" من أصل "+products.length:""}`;if(!list.length){productsList.innerHTML='<div class="empty">لا توجد منتجات مطابقة.</div>';return}productsList.innerHTML=list.map(p=>`<div class="productItem"><img src="${esc(p.image||"assets/logo.png")}" alt="" onerror="this.src='assets/logo.png'"><div class="productInfo"><h3>${esc(p.name||"بدون اسم")}</h3><div class="productMeta">${esc([p.category,p.sub_category,p.brand].filter(Boolean).join(" • ")||"بدون قسم")}<br>${money(p.price)}${p.stock!==undefined&&p.stock!==""?" • الكمية: "+esc(p.stock):""}</div></div><button class="editBtn" type="button" data-index="${products.indexOf(p)}">تعديل</button></div>`).join("")}
+function resetFormMode(){editingId="";form.reset();$("productId").value="";$("stock").value="0";$("formTitle").textContent="إضافة منتج جديد";$("editBadge").classList.add("hidden");$("cancelEditBtn").classList.add("hidden");saveBtn.textContent="+ إضافة المنتج";preview.src="";preview.style.display="none";clearStatus();updateSuggestions()}
+function editProduct(p){editingId=String(p.id||"").trim();if(!editingId){alert("هذا المنتج لا يحتوي على ID، لذلك لا يمكن تعديله بأمان.");return}$("productId").value=editingId;$("name").value=p.name||"";$("price").value=p.price||"";$("old_price").value=p.old_price||"";$("stock").value=p.stock===""||p.stock==null?0:p.stock;$("category").value=p.category||"";$("sub_category").value=p.sub_category||"";$("brand").value=p.brand||"";$("offer").checked=truthy(p.offer)||Number(p.old_price)>Number(p.price);$("featured").checked=truthy(p.featured);$("discount_note").value=p.discount_note||"";$("image").value=p.image||"";$("images").value=normalizeImages(p.images).join("\n");$("desc").value=p.desc||"";if(p.image){preview.src=p.image;preview.style.display="block"}else preview.style.display="none";$("formTitle").textContent="تعديل المنتج";$("editBadge").classList.remove("hidden");$("cancelEditBtn").classList.remove("hidden");saveBtn.textContent="حفظ التعديلات";clearStatus();updateSuggestions();showView("form");window.scrollTo({top:0,behavior:"smooth"})}
+
+function optimisticUpdateProduct(id,values){const i=products.findIndex(p=>String(p.id||"").trim()===String(id||"").trim());if(i<0)return;products[i]={...products[i],...values};updateSuggestions();renderProducts()}
+async function verifyEditedProduct(id,expected){const delays=[900,1600,2800,4500];for(const delay of delays){await sleep(delay);try{const fresh=await fetchProductsData();const saved=fresh.find(p=>String(p.id||"").trim()===String(id||"").trim());if(saved&&String(saved.price||"").trim()===String(expected.price||"").trim()&&String(saved.old_price||"").trim()===String(expected.old_price||"").trim()){products=fresh;products.forEach(p=>rememberSubcategory(p.category,p.sub_category));updateSuggestions();renderProducts();productCount.textContent=`✅ تم تأكيد حفظ التعديل — ${products.length} منتج`;setTimeout(renderProducts,2200);return true}}catch(e){console.warn("Save verification retry",e)}}await refreshProductsSilently();productCount.textContent="⚠️ تم إرسال التعديل، لكن تعذر تأكيده الآن. اضغط ↻ للتحديث.";return false}
+
+imageInput.addEventListener("input",function(){const url=this.value.trim();if(url){preview.src=url;preview.style.display="block"}else{preview.src="";preview.style.display="none"}});
+preview.addEventListener("error",function(){this.style.display="none"});
+$("tabProducts").addEventListener("click",()=>showView("products"));
+$("tabForm").addEventListener("click",()=>{resetFormMode();showView("form")});
+$("tabBrands").addEventListener("click",()=>{showView("brands");loadSavedBrands()});
+$("tabCoupons").addEventListener("click",()=>showView("coupons"));
+$("cancelEditBtn").addEventListener("click",()=>{resetFormMode();showView("products")});
+$("refreshBtn").addEventListener("click",()=>{loadProducts();loadSavedBrands()});
+searchInput.addEventListener("input",renderProducts);
+productsList.addEventListener("click",e=>{const b=e.target.closest("[data-index]");if(b)editProduct(products[Number(b.dataset.index)])});
+
+form.addEventListener("submit",async e=>{e.preventDefault();const isEdit=Boolean(editingId),submittedId=editingId;saveBtn.disabled=true;saveBtn.textContent=isEdit?"جاري حفظ التعديلات...":"جاري إضافة المنتج...";clearStatus();const categoryValue=$("category").value.trim(),subCategoryValue=$("sub_category").value.trim();rememberSubcategory(categoryValue,subCategoryValue);const values={name:$("name").value.trim(),price:$("price").value,old_price:$("old_price").value,stock:$("stock").value,offer:$("offer").checked?"نعم":"",discount_note:$("discount_note").value.trim(),image:imageInput.value.trim(),images:normalizeImages($("images").value).join("|"),category:categoryValue,sub_category:subCategoryValue,brand:$("brand").value.trim(),featured:$("featured").checked?"نعم":"",desc:$("desc").value.trim()};const data=new URLSearchParams();data.append("action",isEdit?"update":"add");if(isEdit)data.append("id",submittedId);Object.entries(values).forEach(([k,v])=>data.append(k,v));try{await fetch(SCRIPT_URL,{method:"POST",body:data,mode:"no-cors"});if(isEdit)optimisticUpdateProduct(submittedId,values);resetFormMode();showView("products");if(isEdit){productCount.textContent="⏳ تم إرسال التعديل، جاري تأكيده من Google Sheets...";verifyEditedProduct(submittedId,values)}else{productCount.textContent="✅ تم إرسال المنتج الجديد، جاري تحديث القائمة...";setTimeout(()=>{refreshProductsSilently();loadSavedBrands()},1200)}}catch(err){console.error(err);setStatus("❌ تعذر الحفظ، حاول مرة أخرى.","error")}saveBtn.disabled=false;saveBtn.textContent=editingId?"حفظ التعديلات":"+ إضافة المنتج"});
+
+updateSuggestions();
+loadProducts();
+loadSavedBrands();
+</script>
+</body>
+</html>
