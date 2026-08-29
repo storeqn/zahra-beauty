@@ -2148,3 +2148,136 @@ body.cart-open{
 .bottom-nav a[data-filter-offers] .modern-nav-icon svg>path:first-child{fill:none}
 .bottom-nav a:active .modern-nav-icon,.bottom-nav button:active .modern-nav-icon{transform:scale(.9)}
 .bottom-nav a:hover .modern-nav-icon,.bottom-nav button:hover .modern-nav-icon,.bottom-nav a.active .modern-nav-icon{color:var(--accent,#c69a62)}
+
+
+/* =========================
+   FOOTER BRAND + MAP
+========================= */
+.footer-brand-card{
+  width:min(calc(100% - 40px),980px);
+  margin:26px auto 8px;
+  padding:24px 0 20px;
+  border-top:1px solid rgba(206,161,79,.45);
+  display:grid;
+  grid-template-columns:160px 1fr;
+  gap:28px;
+  align-items:center;
+}
+
+.footer-brand-logo{
+  width:150px;
+  height:150px;
+  object-fit:contain;
+  border-radius:50%;
+  background:#fff;
+  padding:6px;
+  box-shadow:0 10px 30px rgba(0,0,0,.22);
+}
+
+.footer-brand-copy{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:8px;
+}
+
+.footer-brand-name{
+  font-size:36px;
+  line-height:1.1;
+  color:#f0d8d4;
+  font-weight:900;
+}
+
+.footer-brand-tagline{
+  color:#e7ded1;
+  font-size:15px;
+}
+
+.footer-brand-location{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#f3eadf;
+  font-weight:700;
+  margin-top:6px;
+}
+
+.footer-location-icon{
+  color:#cda24f;
+  font-size:28px;
+  line-height:1;
+}
+
+.footer-map-btn{
+  margin-top:8px;
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:44px;
+  padding:9px 20px;
+  border:1.5px solid #c99b38;
+  border-radius:999px;
+  color:#d9ad55!important;
+  background:transparent!important;
+  text-decoration:none!important;
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.footer-map-btn:hover,
+.footer-map-btn:active{
+  background:#c99b38!important;
+  color:#17120b!important;
+}
+
+@media(max-width:680px){
+  .footer-brand-card{
+    width:min(calc(100% - 28px),520px);
+    grid-template-columns:118px 1fr;
+    gap:18px;
+    padding-top:22px;
+  }
+
+  .footer-brand-logo{
+    width:112px;
+    height:112px;
+  }
+
+  .footer-brand-name{
+    font-size:28px;
+  }
+
+  .footer-brand-tagline{
+    font-size:13px;
+  }
+
+  .footer-map-btn{
+    width:100%;
+    padding-inline:14px;
+  }
+}
+
+@media(max-width:430px){
+  .footer-brand-card{
+    grid-template-columns:96px 1fr;
+    gap:14px;
+  }
+
+  .footer-brand-logo{
+    width:92px;
+    height:92px;
+  }
+
+  .footer-brand-name{
+    font-size:23px;
+  }
+
+  .footer-brand-location{
+    font-size:13px;
+  }
+
+  .footer-map-btn{
+    font-size:13px;
+  }
+}
