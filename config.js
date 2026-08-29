@@ -5,7 +5,7 @@ window.STORE_CONFIG = {
   sheetCsvUrl: "https://script.google.com/macros/s/AKfycbzAnGmxXNDdEmh2OeYIF5qX73rRxXFNE3_75WG9IEYD8hlj4cWdbkVla-uTuIUqcYS1/exec?action=products_csv",
   currency: "د.ع",
   locale: "ar-IQ",
-  logo: "./logo.svg",
+  logo: "./logo.png",
   instagram: "https://www.instagram.com/zahra_beauty.story/",
   cacheKey: "zahra_products_v1",
   coupons: {
