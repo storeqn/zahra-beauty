@@ -1,3 +1,5 @@
+const ZAHRA_SPREADSHEET_ID = '1agOLbZ_JtZAiE0dy1_Foz733yP6FOtaMxbiIUQjO2ls';
+
 /*
   زهرة بيوتي - Google Apps Script
   يدعم المنتجات + الكوبونات + البراندات وشعاراتها.
@@ -51,12 +53,12 @@ function doPost(e) {
 }
 
 function getProductsSheet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = SpreadsheetApp.openById(ZAHRA_SPREADSHEET_ID);
   return ss.getSheetByName(PRODUCTS_SHEET) || ss.getActiveSheet();
 }
 
 function getCouponsSheet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = SpreadsheetApp.openById(ZAHRA_SPREADSHEET_ID);
   let sheet = ss.getSheetByName(COUPONS_SHEET);
   if (!sheet) {
     sheet = ss.insertSheet(COUPONS_SHEET);
@@ -67,7 +69,7 @@ function getCouponsSheet_() {
 }
 
 function getBrandsSheet_() {
-  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const ss = SpreadsheetApp.openById(ZAHRA_SPREADSHEET_ID);
   let sheet = ss.getSheetByName(BRANDS_SHEET);
   if (!sheet) {
     sheet = ss.insertSheet(BRANDS_SHEET);
