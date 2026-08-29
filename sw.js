@@ -1,5 +1,5 @@
-const CACHE = 'zahra-beauty-v1';
-const RUNTIME_CACHE = 'zahra-runtime-v1';
+const CACHE = 'zahra-beauty-v2';
+const RUNTIME_CACHE = 'zahra-runtime-v2';
 
 const ASSETS = [
   './',
