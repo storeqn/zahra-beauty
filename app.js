@@ -764,7 +764,7 @@ function brands(){
 
 const BRANDS_API_URL =
   C?.apiUrl ||
-  'https://script.google.com/macros/s/AKfycbwxFs75do4gJ941Agg0x6432z18qPjqkZ0ucutOCkaH-keZfDGP_xCPRhawbVXLIw8Y/exec';
+  'https://script.google.com/macros/s/AKfycbzAnGmxXNDdEmh2OeYIF5qX73rRxXFNE3_75WG9IEYD8hlj4cWdbkVla-uTuIUqcYS1/exec';
 
 let brandLogoItems = [];
 
