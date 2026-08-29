@@ -2138,3 +2138,13 @@ body.cart-open{
 .footer-location-whatsapp span{font-weight:700}
 .footer-whatsapp-btn{display:inline-flex!important;align-items:center;justify-content:center;padding:9px 15px;border-radius:999px;background:#25D366!important;color:#fff!important;text-decoration:none!important;font-weight:800;line-height:1}
 .footer-whatsapp-btn::before{content:"☎";font-size:16px;margin-left:6px}
+
+
+/* Modern bottom navigation icons */
+.bottom-nav .modern-nav-icon{width:30px;height:30px;display:grid;place-items:center;border-radius:11px;transition:.22s ease;color:#454545}
+.bottom-nav .modern-nav-icon svg{width:25px;height:25px;display:block;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.bottom-nav a[data-go-home] .modern-nav-icon svg path{fill:currentColor;stroke:currentColor}
+.bottom-nav a[data-go-categories] .modern-nav-icon svg rect{fill:none}
+.bottom-nav a[data-filter-offers] .modern-nav-icon svg>path:first-child{fill:none}
+.bottom-nav a:active .modern-nav-icon,.bottom-nav button:active .modern-nav-icon{transform:scale(.9)}
+.bottom-nav a:hover .modern-nav-icon,.bottom-nav button:hover .modern-nav-icon,.bottom-nav a.active .modern-nav-icon{color:var(--accent,#c69a62)}
