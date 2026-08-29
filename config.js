@@ -6,7 +6,7 @@ window.STORE_CONFIG = {
   currency: "د.ع",
   locale: "ar-IQ",
   logo: "./logo.svg",
-  instagram: "https://www.instagram.com/zahra_beauty.story?igsi=ZzhpYzEwMjVna2Rl",
+  instagram: "https://www.instagram.com/zahra_beauty.story/",
   cacheKey: "zahra_products_v1",
   coupons: {
     "AMEER10": { type:"percent", value:10, min:0, active:true }
@@ -52,7 +52,7 @@ if (/(^|\/)admin\.html$/i.test(location.pathname)) {
   function addInstagram(){
     const top=document.querySelector('.topbar-inner'),cart=document.getElementById('cartBtn');
     if(top&&!document.getElementById('instagramHeaderBtn')){
-      const a=document.createElement('a');a.id='instagramHeaderBtn';a.className='instagram-header-btn';a.href=instagramUrl;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label','إنستغرام زهرة بيوتي');a.innerHTML=instagramIcon;
+      const a=document.createElement('a');a.id='instagramHeaderBtn';a.className='instagram-header-btn';a.href=instagramUrl;a.target='_blank';a.rel='noopener noreferrer';a.setAttribute('aria-label','إنستغرام زهرة بيوتي');a.innerHTML=instagramIcon;a.addEventListener('click',e=>{e.preventDefault();location.href=instagramUrl;});
       if(cart)top.insertBefore(a,cart);else top.appendChild(a);
     }
     const form=document.getElementById('checkoutForm');
