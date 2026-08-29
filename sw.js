@@ -1,5 +1,5 @@
-const CACHE = 'alameer-brand-v12';
-const RUNTIME_CACHE = 'alameer-runtime-v5';
+const CACHE = 'zahra-beauty-v1';
+const RUNTIME_CACHE = 'zahra-runtime-v1';
 
 const ASSETS = [
   './',
@@ -10,10 +10,10 @@ const ASSETS = [
   './config.js',
   './coupons-sync.js',
   './manifest.webmanifest',
-  './assets/logo.png',
+  './logo.png',
   './assets/placeholder.svg',
-  './assets/icon-192.png',
-  './assets/icon-512.png'
+  './icon-192.png',
+  './icon-512.png'
 ];
 
 self.addEventListener('install', event => {
@@ -94,7 +94,7 @@ self.addEventListener('fetch', event => {
   if(request.destination === 'image'){
     event.respondWith(
       staleWhileRevalidate(request)
-        .catch(() => caches.match('./assets/logo.png'))
+        .catch(() => caches.match('./logo.png'))
     );
     return;
   }
