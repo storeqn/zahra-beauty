@@ -397,7 +397,7 @@ function normalizeProduct(r, idx){
       ? uniqImages
 
       : [
-          'assets/logo.png'
+          'logo.png'
         ],
 
 
@@ -680,7 +680,7 @@ const demoProducts = [
     discount_note:'',
 
     images:[
-      'assets/logo.png'
+      'logo.png'
     ],
 
     category:'أخرى',
@@ -1125,7 +1125,7 @@ function productCard(
           : 'low'
         }"
 
-        onerror="this.onerror=null;this.src='assets/logo.png'"
+        onerror="this.onerror=null;this.src='logo.png'"
 
       >
 
@@ -1369,7 +1369,7 @@ function renderCategories(){
 
       <div class="category-logo-wrap">
         <img
-          src="assets/logo.png"
+          src="logo.png"
           alt="زهرة بيوتي"
           class="category-logo">
       </div>
@@ -1406,7 +1406,7 @@ function renderCategories(){
           <div class="category-logo-wrap">
 
             <img
-              src="assets/logo.png"
+              src="logo.png"
               alt="${esc(c)}"
               class="category-logo">
 
@@ -2312,7 +2312,7 @@ function renderCart(){
 
           alt="${esc(p.name)}"
 
-          onerror="this.onerror=null;this.src='assets/logo.png'"
+          onerror="this.onerror=null;this.src='logo.png'"
 
         >
 
@@ -2556,7 +2556,7 @@ function openProduct(id){
 
             alt="${esc(p.name)}"
 
-            onerror="this.onerror=null;this.src='assets/logo.png'"
+            onerror="this.onerror=null;this.src='logo.png'"
 
           >
 
