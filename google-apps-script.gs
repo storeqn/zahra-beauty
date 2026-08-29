@@ -16,10 +16,11 @@ function doGet(e) {
   const action = String((e && e.parameter && e.parameter.action) || '').trim().toLowerCase();
   if (action === 'coupons' || action === 'list_coupons') return listCoupons_();
   if (action === 'brands' || action === 'list_brands') return listBrands_();
+  if (action === 'products_csv' || action === 'products') return listProductsCsv_();
   return jsonResponse({
     success: true,
     message: 'Zahra Beauty Store API is working',
-    supports: ['add', 'update', 'coupon_add', 'coupon_update', 'coupon_delete', 'coupons', 'brand_upsert', 'brand_delete', 'brands']
+    supports: ['add', 'update', 'products_csv', 'coupon_add', 'coupon_update', 'coupon_delete', 'coupons', 'brand_upsert', 'brand_delete', 'brands']
   });
 }
 
@@ -367,4 +368,25 @@ function generateProductId_() {
 
 function jsonResponse(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
+}
+
+
+function listProductsCsv_() {
+  try {
+    const sheet = getProductsSheet_();
+    ensureProductHeaders_(sheet);
+    const lastRow = sheet.getLastRow();
+    const lastCol = sheet.getLastColumn();
+    const values = lastRow > 0 ? sheet.getRange(1, 1, lastRow, lastCol).getDisplayValues() : [];
+    const csv = values.map(row => row.map(csvEscape_).join(',')).join('\n');
+    return ContentService.createTextOutput(csv).setMimeType(ContentService.MimeType.CSV);
+  } catch (err) {
+    return ContentService.createTextOutput('id,name,price,old_price,offer,discount_note,image,images,category,sub_category,brand,featured,stock,desc,active\n')
+      .setMimeType(ContentService.MimeType.CSV);
+  }
+}
+
+function csvEscape_(value) {
+  const s = String(value == null ? '' : value);
+  return /[",\n\r]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s;
 }
