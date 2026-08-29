@@ -1,7 +1,8 @@
 window.STORE_CONFIG = {
   storeName: "زهرة بيوتي",
+  apiUrl: "https://script.google.com/macros/s/AKfycbzAnGmxXNDdEmh2OeYIF5qX73rRxXFNE3_75WG9IEYD8hlj4cWdbkVla-uTuIUqcYS1/exec",
   whatsapp: "9647733949777",
-  sheetCsvUrl: "./products.csv",
+  sheetCsvUrl: "https://script.google.com/macros/s/AKfycbzAnGmxXNDdEmh2OeYIF5qX73rRxXFNE3_75WG9IEYD8hlj4cWdbkVla-uTuIUqcYS1/exec?action=products_csv",
   currency: "د.ع",
   locale: "ar-IQ",
   logo: "./logo.svg",
