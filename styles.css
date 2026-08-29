@@ -2133,3 +2133,8 @@ body.cart-open{
     height:88px;
   }
 }
+
+.footer-location-whatsapp{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.footer-location-whatsapp span{font-weight:700}
+.footer-whatsapp-btn{display:inline-flex!important;align-items:center;justify-content:center;padding:9px 15px;border-radius:999px;background:#25D366!important;color:#fff!important;text-decoration:none!important;font-weight:800;line-height:1}
+.footer-whatsapp-btn::before{content:"☎";font-size:16px;margin-left:6px}
