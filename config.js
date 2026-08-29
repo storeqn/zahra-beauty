@@ -6,7 +6,7 @@ window.STORE_CONFIG = {
   currency: "د.ع",
   locale: "ar-IQ",
   logo: "./logo.svg",
-  instagram: "",
+  instagram: "https://www.instagram.com/zahra_beauty.story?igsi=ZzhpYzEwMjVna2Rl",
   cacheKey: "zahra_products_v1",
   coupons: {
     "AMEER10": { type:"percent", value:10, min:0, active:true }
