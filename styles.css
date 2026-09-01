@@ -2432,3 +2432,55 @@ body.cart-open{
     grid-column:1/-1;
   }
 }
+
+
+/* Compact install guide — 2026-09-01 */
+.install-guide-card{
+  background:#fff;
+  color:#171512;
+  border:1px solid #eadfc9;
+}
+.install-guide-close{color:#1688e8}
+.install-guide-top p{color:#777}
+.install-guide-steps{gap:8px}
+.install-step{
+  display:grid;
+  grid-template-columns:48px 1fr;
+  align-items:center;
+  gap:12px;
+  min-height:64px;
+  padding:10px 12px;
+  border:1px solid #eadfc9;
+  border-radius:14px;
+  background:#faf8f4;
+}
+.install-step-icon{
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:#fff;
+  border:1px solid #eadfc9;
+  color:#1688e8;
+  font-size:23px;
+}
+.install-step small{
+  color:#777;
+  margin-top:2px;
+}
+.install-guide-arrow{
+  text-align:center;
+  color:#b68b3d;
+  font-size:20px;
+  line-height:1;
+}
+.install-guide-actions{
+  display:block;
+  margin-top:16px;
+}
+.install-ok-btn{
+  width:100%;
+  min-height:48px;
+  border-radius:13px;
+  background:linear-gradient(135deg,#e3c47c,#b68b3d);
+  color:#17120b;
+}
