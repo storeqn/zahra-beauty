@@ -65,7 +65,7 @@
   
   <link
     rel="stylesheet"
-    href="./styles.css?v=20260829-2"
+    href="./styles.css?v=20260901-1"
   >
 
 </head>
@@ -260,6 +260,14 @@
             >
               تسوق الآن
             </a>
+
+            <button
+              class="btn btn-ghost"
+              type="button"
+              data-install-open
+            >
+              ⇩ تثبيت المتجر
+            </button>
 
             <a
               class="btn btn-ghost"
@@ -845,144 +853,65 @@
   class="install-guide"
   hidden
 >
-
-  <div
-    class="install-guide-backdrop"
-    data-install-close
-  ></div>
-
+  <div class="install-guide-backdrop" data-install-close></div>
 
   <div class="install-guide-card">
-
     <button
       type="button"
       class="install-guide-close"
       data-install-close
       aria-label="إغلاق"
-    >
-      ×
-    </button>
-
+    >×</button>
 
     <div class="install-guide-top">
-
       <img
         src="logo.png"
         alt="زهرة بيوتي"
         class="install-guide-logo"
       >
-
-
       <div>
-
-        <h3>
-          ثبّت متجر زهرة بيوتي
-        </h3>
-
-        <p>
-          أضف المتجر إلى الشاشة الرئيسية للوصول السريع وتجربة أفضل.
-        </p>
-
+        <h3>ثبّت متجر زهرة بيوتي</h3>
+        <p>أضفه إلى الشاشة الرئيسية للوصول إليه مثل أي تطبيق.</p>
       </div>
-
     </div>
 
+    <div class="install-guide-steps" id="installGuideSteps">
+      <div class="install-step">
+        <span class="install-step-icon">⇧</span>
+        <div><strong>اضغط زر المشاركة</strong><br><small>أسفل Safari</small></div>
+      </div>
 
-    <div class="install-guide-title">
-      طريقة التثبيت:
+      <div class="install-guide-arrow">↓</div>
+
+      <div class="install-step">
+        <span class="install-step-icon">＋</span>
+        <div><strong>إضافة إلى الشاشة الرئيسية</strong></div>
+      </div>
+
+      <div class="install-guide-arrow">↓</div>
+
+      <div class="install-step">
+        <span class="install-step-icon">✓</span>
+        <div><strong>اضغط إضافة</strong><br><small>تم التثبيت</small></div>
+      </div>
     </div>
-
-
-    <div class="install-guide-steps">
-
-      <div class="install-step">
-
-        <span class="install-step-number">
-          1
-        </span>
-
-        <div>
-          اضغط على زر المشاركة
-        </div>
-
-        <span class="install-step-icon">
-          ⇧
-        </span>
-
-      </div>
-
-
-      <div class="install-step">
-
-        <span class="install-step-number">
-          2
-        </span>
-
-        <div>
-          اختر
-          <strong>
-            إضافة إلى الشاشة الرئيسية
-          </strong>
-        </div>
-
-        <span class="install-step-icon">
-          ＋
-        </span>
-
-      </div>
-
-
-      <div class="install-step">
-
-        <span class="install-step-number">
-          3
-        </span>
-
-        <div>
-          اضغط على
-          <strong>
-            إضافة
-          </strong>
-        </div>
-
-        <span class="install-step-icon">
-          ✓
-        </span>
-
-      </div>
-
-    </div>
-
 
     <div class="install-guide-actions">
-
-      <button
-        type="button"
-        class="install-later-btn"
-        data-install-later
-      >
-        لاحقًا
-      </button>
-
-
       <button
         type="button"
         class="install-ok-btn"
-        data-install-ok
+        data-install-close
       >
-        حسنًا، فهمت
+        فهمت
       </button>
-
     </div>
-
   </div>
-
 </div>
 
-  <script src="./config.js?v=20260829-2"></script>
-  <script src="./coupons-sync.js?v=20260829-2"></script>
-  <script src="./app.js?v=20260829-2"></script>
-  <script src="./progressive-products.js?v=20260829-2"></script>
+  <script src="./config.js?v=20260901-1"></script>
+  <script src="./coupons-sync.js?v=20260901-1"></script>
+  <script src="./app.js?v=20260901-1"></script>
+  <script src="./progressive-products.js?v=20260901-1"></script>
   
 </body>
 
