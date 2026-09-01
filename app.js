@@ -4221,45 +4221,134 @@ function isStandaloneMode(){
   );
 }
 
+let deferredInstallPrompt = null;
 
-function showInstallGuide(){
+window.addEventListener(
+  'beforeinstallprompt',
+  e => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+  }
+);
+
+function renderInstallSteps(){
+
+  const steps =
+    $('#installGuideSteps');
+
+  if(!steps){
+    return;
+  }
+
+  const ios =
+    /iphone|ipad|ipod/i
+      .test(
+        navigator.userAgent
+      );
+
+  if(ios){
+
+    steps.innerHTML = `
+      <div class="install-step">
+        <span class="install-step-icon">⇧</span>
+        <div>
+          <strong>اضغط زر المشاركة</strong>
+          <br>
+          <small>أسفل Safari</small>
+        </div>
+      </div>
+
+      <div class="install-guide-arrow">↓</div>
+
+      <div class="install-step">
+        <span class="install-step-icon">＋</span>
+        <div>
+          <strong>إضافة إلى الشاشة الرئيسية</strong>
+        </div>
+      </div>
+
+      <div class="install-guide-arrow">↓</div>
+
+      <div class="install-step">
+        <span class="install-step-icon">✓</span>
+        <div>
+          <strong>اضغط إضافة</strong>
+          <br>
+          <small>تم التثبيت</small>
+        </div>
+      </div>
+    `;
+
+  }else{
+
+    steps.innerHTML = `
+      <div class="install-step">
+        <span class="install-step-icon">⋮</span>
+        <div>
+          <strong>افتح قائمة المتصفح</strong>
+        </div>
+      </div>
+
+      <div class="install-guide-arrow">↓</div>
+
+      <div class="install-step">
+        <span class="install-step-icon">＋</span>
+        <div>
+          <strong>تثبيت التطبيق</strong>
+          <br>
+          <small>أو إضافة إلى الشاشة الرئيسية</small>
+        </div>
+      </div>
+
+      <div class="install-guide-arrow">↓</div>
+
+      <div class="install-step">
+        <span class="install-step-icon">✓</span>
+        <div>
+          <strong>وافق على التثبيت</strong>
+        </div>
+      </div>
+    `;
+
+  }
+}
+
+async function openInstallGuide(){
+
+  if(isStandaloneMode()){
+
+    showToast(
+      'المتجر مثبت بالفعل'
+    );
+
+    return;
+  }
+
+  if(deferredInstallPrompt){
+
+    deferredInstallPrompt.prompt();
+
+    try{
+      await deferredInstallPrompt
+        .userChoice;
+    }catch(e){}
+
+    deferredInstallPrompt = null;
+
+    return;
+  }
+
+  renderInstallSteps();
 
   const guide =
     $('#installGuide');
 
-  if(!guide){
-    return;
+  if(guide){
+    guide.hidden = false;
   }
-
-  /* إذا الموقع مفتوح كتطبيق مثبت لا تظهر النافذة */
-  if(isStandaloneMode()){
-    guide.hidden = true;
-    return;
-  }
-
-  /* إذا ضغط سابقاً حسنًا فهمت لا تظهر مرة أخرى */
-  const dismissed =
-    localStorage.getItem(
-      'alameer_install_guide_done'
-    );
-
-  if(dismissed === '1'){
-    guide.hidden = true;
-    return;
-  }
-
-  setTimeout(
-    () => {
-      guide.hidden = false;
-    },
-    1200
-  );
 }
 
-
-function closeInstallGuide(
-  remember = false
-){
+function closeInstallGuide(){
 
   const guide =
     $('#installGuide');
@@ -4267,47 +4356,23 @@ function closeInstallGuide(
   if(guide){
     guide.hidden = true;
   }
-
-  if(remember){
-
-    localStorage.setItem(
-      'alameer_install_guide_done',
-      '1'
-    );
-
-  }
 }
-
 
 document.addEventListener(
   'click',
   e => {
 
-    const ok =
+    const open =
       e.target.closest(
-        '[data-install-ok]'
+        '[data-install-open]'
       );
 
-    if(ok){
+    if(open){
 
-      closeInstallGuide(true);
+      openInstallGuide();
 
       return;
     }
-
-
-    const later =
-      e.target.closest(
-        '[data-install-later]'
-      );
-
-    if(later){
-
-      closeInstallGuide(false);
-
-      return;
-    }
-
 
     const close =
       e.target.closest(
@@ -4316,16 +4381,13 @@ document.addEventListener(
 
     if(close){
 
-      closeInstallGuide(false);
+      closeInstallGuide();
 
       return;
     }
 
   }
 );
-
-
-showInstallGuide();
 
 
 loadProducts();
